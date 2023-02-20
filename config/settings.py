@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "admin_interface",
+    "colorfield",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -40,8 +42,13 @@ INSTALLED_APPS = [
     "markdownify.apps.MarkdownifyConfig",
     "mainapp",
     "authapp",
+    "crispy_forms",
+    "crispy_bootstrap4",
     "social_django",
 ]
+
+X_FRAME_OPTIONS = "SAMEORIGIN"
+SILENCED_SYSTEM_CHECKS = ["security.W019"]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -154,3 +161,4 @@ AUTHENTICATION_BACKENDS = (
 
 SOCIAL_AUTH_GITHUB_KEY = "97973610e87acd29947a"
 SOCIAL_AUTH_GITHUB_SECRET = "467d2d56d922cec13cce4dca23ec65fa4b6eba5e"
+CRISPY_TEMPLATE_PACK = "bootstrap4"
